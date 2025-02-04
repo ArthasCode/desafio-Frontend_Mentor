@@ -10,25 +10,85 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+  
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+    /* Mobile First */
+      
+    :root{
+      --Amarelo:hsl(47, 88%, 63%);
+      --White: hsl(0, 0%, 100%);
+
+      --Gray_500: hsl(0, 0%, 42%);
+      --Gray_950: hsl(0, 0%, 7%);
+    }
+    html, body{
+      height: 100%;
+      display: grid;
+      place-items: center;
+      background-color: var(--Amarelo);
+      font: 500 16px Figtree;
+    }
+    main{
+      padding: 20px;
+      border-radius: 30px;
+      width: 375px;
+      display: flex;
+      align-items: flex-start;
+      flex-flow: column wrap;
+      background-color: white;
+      border: 2px solid black;
+      box-shadow: 10px 10px 0px black;
+    }
+    img#fundo{
+      width:100%;
+      align-self: center;
+      border-radius: 30px;
+    }
+    div#status{
+      padding: 8px 15px;
+      background-color: var(--Amarelo);
+      border-radius: 5px;
+      margin: 15px 0px;
+      font-weight: 800;
+    }
+    h1#title{
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+    p{
+      color: var(--Gray_500);
+      line-height: 1.7em;
+    }
+    figure{
+      display: flex;
+      margin: 10px 0px;
+      align-items: center;
+      padding: 0;
+    }
+    figcaption{
+      font-weight: 800;
+      padding: 20px;
+      color: var(--Gray_950);
+    }
   </style>
 </head>
 <body>
-
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
+<main>
+    <img id="fundo" src="assets/images/illustration-article.svg" alt="Image">
+    <div id="status">Learning</div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <aside id="date">Published 21 Dec 2023</aside>
+  
+    <h1 id="title">HTML & CSS foundations</h1>
+  
+    <article><p>These languages are the backbone of every website, defining structure, content, and presentation.</p></article>
+  
+    <figure>
+      <img src="assets/images/image-avatar.webp" alt="Greg Hooper picture">
+      <figcaption>Greg Hooper</figcaption>
+    </figure>
+  
+</main>
 </body>
 </html>
